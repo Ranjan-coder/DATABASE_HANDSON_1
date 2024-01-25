@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Data Base : use Human_Resource</h1>
+    <div>Creating Collection : db.createCollection("employee")</div>
+    <div>Query the collection "employee" and list all the documents : db.employees.find()</div>
+    <div>Query the collection "employee" and list the employees who are having salary more than 30000 : db.employees.find({salary:{$gt:"30000"}})</div>
+    <div>Query the collection "employee" and list the employees who are having experience more than 2 years. : db.employees.find({overallExp:{$gt:"2"}})</div>
+    <div>Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year  : db.employees.find({yearGrad:{$gt:"2015"},overallExp:{$gt:"1"}})</div>
+    <div>Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000. : db.employees.update({salary:{$gt:"70000"}},{$set:{salary:"65000"}})</div>
+    <div>Delete all the documents from "employee" where last company is Y : db.employees.remove({lastCompany:"y"})</div>
+
+</body>
+</html>
